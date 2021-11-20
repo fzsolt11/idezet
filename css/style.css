@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Roboto+Slab:wght@100;400;700&family=Space+Grotesk&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	
+}
+body {
+	background-image: url('../pict/freedom.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family:  'Roboto Slab', serif;
+	background-attachment: fixed;
+	background-position: center center;
+}
+.wrapper {
+	width: 95%;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+.text1, .text2 {
+	text-align: center;
+}
+.text1 p{
+	margin-top: 6rem; 
+	font-variant: small-caps;
+	font-size: 2.75rem;
+}
+.text2 p {
+	margin-top: 5rem;
+	font-style: italic;
+	font-size: 1.75rem;
+}
+nav {
+	background: #74b4ec;
+	position: sticky; 
+	top: 0;
+}
+nav ul {
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+nav ul li {
+	float: left;
+}
+nav::after {
+	content: '';
+	clear: both;
+	display: table;
+}
+nav a {
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 1.2rem 1rem;
+}
+nav a:hover {
+	background: rgba(0,0,0,.5);
+	}
+.navigation li:first-child {
+	padding: 1.2rem 1rem;
+	color: rgba(255,255,255,.7);
+	
+}
+@media(max-width:800px) {
+	.text1 p {
+		font-size: 1.5rem;
+	}
+	.text2 p {
+		font-size: 1rem;
+	}
+	
+}
+
+
+.mobile-menu-button + input[type="checkbox"]{
+	display: none;
+}
+
+
+.mobile-menu-button span{
+	display: block;
+	height: 4px;
+	background: white;
+	margin: 0 0 5px 0;
+	border-radius: 2px;
+}
+
+
+
+.mobile-menu-button {
+	display: block;
+	width: 50px;
+	float: right;
+	padding: 10px;
+	margin: 7px 5px 0 0 ;
+	border: 1px solid rgba(255,255,255,.2);
+	display: none;
+}
+
+
+.mobile-menu-button span:last-of-type {
+	margin: 0;
+}
+
+
+@media(max-width:600px) {
+		.mobile-menu-button {
+			display: block;
+		}
+		.navigation li:not(:first-child) {
+			display: none;
+		}
+		.navigation li {
+			float:none;
+			border-top: 1px solid rgba(255,255,255,.2);
+		}
+		.navigation a {
+			padding: 0.5rem 1rem;
+			font-size: .9rem;
+		}
+		.text1 p {
+		font-size: 1.1rem;
+		margin-top: 3rem;
+		}
+		.text2 p {
+		font-size: 0,75rem;
+		}
+}
+
+
+
+
+.mobile-menu-button + input[type="checkbox"]:checked ~ .navigation li:not(:first-child){
+	display: block;
+}
+
+
